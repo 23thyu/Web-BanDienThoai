@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "DanhSachSanPham";
+    Layout = "~/Views/Shared/_LayoutTrangChu.cshtml";
+}
+<style>
+    #id-image{
+        height:200px;
+        width:150px;
+        margin-left:110px;
+    }
+    .item-info{
+        text-align:center;
+    }
+</style>
+
+@model List<QLCoffee.Models.SANPHAM>
+@foreach (var item in Model)
+{
+    <div class=" col-sm-3 product-item ">
+        <a class="item-wrapper">           
+            <img id="id-image" class="item-img img-responsive center-block lazy" data-original="https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png" alt="Trà Lucky" src="https://phuclong.com.vn/uploads/dish/f48194a2a92877-luckytea.png" style="">
+
+            <div class="item-info">
+                <div class="item-name">Trà Lucky</div>
+
+                <div class="item-desc">
+                    Lucky Tea
+                </div>
+                <div class="item-price">50.000 đ</div>
+              
+            </div>
+        </a>
+    </div>
+   
+}

@@ -1,0 +1,89 @@
+﻿@model QLCoffee.Models.SANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SANPHAM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaLoaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaLoaiSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgaySX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgaySX)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+
+    </dl>
+</div>
+<div class="form-group">
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-3">
+                <h4>Ảnh</h4>
+                <img src="@Model.Image1" style="width:200px" />
+                <p>
+                    <a href="/SanPham/Upload_Image?idSanPham=@Model.MaSP" class="pull-right">Cập Nhật </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.MaSP  }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

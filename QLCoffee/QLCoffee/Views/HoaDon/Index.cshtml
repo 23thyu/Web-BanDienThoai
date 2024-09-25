@@ -1,0 +1,76 @@
+﻿@model IEnumerable<QLCoffee.Models.HOADON>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TongGiaTriHD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GhiChu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrangThaiDH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaShipper)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaNV)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TongGiaTriHD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GhiChu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrangThaiDH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaShipper)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaNV)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.MaHD  }) |
+            @Html.ActionLink("Details", "Details", new {  id=item.MaHD  }) |
+            @Html.ActionLink("Delete", "Delete", new {  id=item.MaHD  })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Uploat Image";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div>
+    <h3>Cập Nhật</h3>
+    <form method="post" enctype="multipart/form-data">
+        <input type="hidden" name="idSanPham" value="@ViewBag.idSanPham" />
+        <br />
+        <label>Chọn ảnh</label>
+        <br />
+        <input type="file" name="fileImage" />
+        <button class="btn btn-xs btn-success">Uploat</button>
+    </form>
+</div>

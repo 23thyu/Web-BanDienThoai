@@ -1,0 +1,77 @@
+﻿@model IEnumerable<QLCoffee.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaLoaiSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaLoaiSP)
+        </td>
+        <td>
+                
+        </td>
+        <td>
+            @if (!string.IsNullOrEmpty(item.Image1))
+            {
+                <img src="@Url.Content(item.Image1)" alt ="Image" style="width: 100px; height: 100px;" />
+            }
+            else
+            {
+                <span>No Image</span>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.MaSP }) |
+            @Html.ActionLink("Details", "Details", new { id = item.MaSP }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.MaSP })
+        </td>
+    </tr>
+}
+
+</table>
