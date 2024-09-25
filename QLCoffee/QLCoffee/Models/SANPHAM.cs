@@ -11,7 +11,8 @@ namespace QLCoffee.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class SANPHAM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,6 +26,8 @@ namespace QLCoffee.Models
         public int GiaSP { get; set; }
         public Nullable<int> SoLuongSP { get; set; }
         public string MaLoaiSP { get; set; }
+
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> NgaySX { get; set; }
         public string Image1 { get; set; }
     

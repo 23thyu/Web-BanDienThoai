@@ -56,7 +56,7 @@
 
         .error-message {
             color: red;
-            font-size: 14px;
+            font-size: 8px;
             text-align: left;
         }
     </style>
@@ -71,7 +71,6 @@
             {
                 <div class="error-message">@ViewBag.ErrorID</div>
             }
-
             <!-- Mật khẩu -->
             <input type="password" name="MatKhau" placeholder="Mật khẩu">
             @Html.ValidationMessageFor(m => m.MatKhau)
@@ -80,11 +79,6 @@
                 <div class="error-message">@ViewBag.ErrorPass</div>
             }
 
-            <!-- Thông báo lỗi chung -->
-            @if (ViewBag.ErrorMessage != null)
-            {
-                <div class="error-message">@ViewBag.ErrorMessage</div>
-            }
 
             <!-- Nút đăng nhập -->
             <input type="submit" value="Đăng Nhập">

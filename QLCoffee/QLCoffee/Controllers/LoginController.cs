@@ -45,7 +45,7 @@ namespace QLCoffee.Controllers
 
                         Session["TenDN"] = user.TenDN;
                         Session["PhanQuyen"] = user.PhanQuyen;
-                        return RedirectToAction("Index", "TaiKhoan");
+                        return RedirectToAction("Index", "TaiKhoan", new {area = "Admin"});
                     }
                     else if (user.PhanQuyen == "1")
                     {
@@ -55,7 +55,7 @@ namespace QLCoffee.Controllers
                     }
                     else
                     {
-                        ViewBag.ErrorMessage = "SAI rồi Ba";
+                        ViewBag.ErrorMessage = "Tên đăng nhập không tồn tại";
                         return View("Login");
                     }
                 }
@@ -78,7 +78,6 @@ namespace QLCoffee.Controllers
                 {
                     taikhoan.PhanQuyen = "1";
                 }
-                
 
                 database.TAIKHOANs.Add(taikhoan); 
                 database.SaveChanges();   /*Lưu lại data*/

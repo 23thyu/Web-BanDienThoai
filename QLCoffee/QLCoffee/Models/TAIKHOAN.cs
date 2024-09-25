@@ -23,6 +23,7 @@ namespace QLCoffee.Models
         public string TenDN { get; set; }
         [DisplayName("MatKhau")]
         [Required(ErrorMessage = "Error Empty")]
+
         public string MatKhau { get; set; }
         [DisplayName("PhanQuyen")]
         [Required(ErrorMessage = "Error Empty")]
@@ -34,7 +35,8 @@ namespace QLCoffee.Models
         [Required(ErrorMessage = "Error Empty")]
         [Compare("MatKhau")]
         public string Repass { get; set; }
-    
+
+
         public virtual KHACHHANG KHACHHANG { get; set; }
         public virtual NHANVIEN NHANVIEN { get; set; }
     }

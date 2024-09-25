@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'D:\Git_Project\4-9\QLCoffee\QLCoffee\Models\EntitiesDB.edmx'. 
+﻿// T4 code generation is enabled for model 'D:\Git_Project\Master-web\QLCoffee\QLCoffee\Models\EntitiesDB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

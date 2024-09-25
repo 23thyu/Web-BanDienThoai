@@ -1,0 +1,77 @@
+﻿@model IEnumerable<QLCoffee.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Danh sách sản phẩm</h2>
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Mã sản phẩm
+        </th>
+        <th>
+            Tên sản phẩm
+        </th>
+        <th>
+            Giá sản phẩm
+        </th>
+        <th>
+            Số Lượng sản phẩm
+        </th>
+        <th>
+            Mã loại sản phẩm
+        </th>
+        <th>
+            Ngày sản xuất
+        </th>
+        <th>
+            Hình ảnh
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaLoaiSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgaySX)
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.Image1))
+                {
+                    <img src="@Url.Content(item.Image1)" alt="Image" style="width: 100px; height: 100px;" />
+                }
+                else
+                {
+                    <span>No Image</span>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaSP}, new { @class = "btn btn-sm btn-primary" }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaSP}, new { @class = "btn btn-sm btn-dark" }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaSP }, new { @class = "btn btn-sm btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -14,15 +14,11 @@
     <style>
 
         #div-left {
-            width: 20%;
-            height: 1000px;
-            float: left;
-            background-color: #e9ecef;
         }
 
         #div-content {
-            width: 80%;
-            height: 1000px;
+            width: 100%;
+            height: auto;
             float: left;
             background-color: white;
         }
@@ -33,27 +29,43 @@
             font-size: 18px;
             text-decoration: none
         }
+        .nav-link{
+            color:white;
+            
+        }
+        .nav-link:hover {
+                background-color: #333333;
+                color: white;
+                border-radius:5px;               
+        }
+
     </style>
 </head>
 
 <body>
-    <div id="div-top" style="background-color: #ced4da">
+    <div id="div-top" style="background-color: black">
         <nav class="navbar navbar-expand-sm" id="div-menu">
             <div class="container-fluid">
-                <a class="navbar-brand" id="id-logo" href="#" style="font-size:40px;">Trang Admin</a>
+                <a class="navbar-brand" id="id-logo" href="#" style="font-size: 30px; font-weight: bold; color: white">Admin</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="collapsibleNavbar">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Staff/Index" style="font-weight:normal;">Quản lý nhân viên</a>
+                            <a class="nav-link" href="/TaiKhoan/Index" style="font-weight:normal;">Quản lý tài khoản</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/SanPham/Index" style="font-weight:normal;">Quản Lý Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/LoaiSanPham/Index" style="font-weight:normal;">Loại Sản Phẩm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/Staff/Index" style="font-weight: normal;">Quản lý nhân viên</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/KhachHang/Index" style="font-weight:normal;">Quản lý khách hàng</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/TaiKhoan/Index" style="font-weight:normal;">Quản lý tài khoản</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/NCC/Index" style="font-weight:normal;">Nhà cung cấp</a>
@@ -61,15 +73,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/HoaDon/Index" style="font-weight:normal;">Thông tin hóa đơn</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/LoaiSanPham/Index" style="font-weight:normal;">Loại Sản Phẩm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/SanPham/Index" style="font-weight:normal;">Quản Lý Sản Phẩm</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" style="font-weight:normal;">thêm...</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -77,7 +81,7 @@
     </div>
     <hr />
     <div id="div-left">
-        <div class="container mt-3">
+        @*<div class="container mt-3">
             <div class="dropdown">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
                     Website
@@ -86,7 +90,7 @@
                     <li><a class="dropdown-item" href="/Home/TrangChu">Trang Chủ</a></li>
                 </ul>
             </div>
-        </div>
+        </div>*@
     </div>
     <div id="div-content" style="padding:10px">
         @RenderBody()

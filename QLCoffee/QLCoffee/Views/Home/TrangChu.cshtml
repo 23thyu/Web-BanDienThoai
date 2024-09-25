@@ -35,44 +35,33 @@
         font-style: normal;
         font-size: 24pt;
     }
-
-    .img_menu {
-        width: 150px;
-        height: 150px;
-        margin-left: 65px;
-        margin-right: 65px;
-        
-      
-       
-    }
-
-    .text-menu {
-        text-align: center;
-        margin-top: 10px;
-        font-weight: bold;
+    .mySlides {
+          float:left;   
     }
 </style>
-<div class="row">
-    <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="~/Content/Image/baner_ip.jpg" style="width: 100%; height:370px;" />
-    </div>
-    <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="~/Content/Image/baner_dongho.jpg" style="width: 100%; height: 370px " />
-    </div>
 
-    <div class="mySlides">
-        <div class="numbertext"></div>
-        <img src="~/Content/Image/baner_taynghe.jpg" style="width: 100%; height: 370px " />
-    </div>
-    <a class="prev" onclick="plusSlides(-1)" style="margin-bottom:20px">❮</a>
-    <a class="next" onclick="plusSlides(1)" style="margin-bottom:20px ">❯</a>
+    <div class="row">
+            <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="~/Data/Image/banner1.png" style="width: 100%; height: 400px;" />
+            </div>
+            <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="~/Data/Image/banner2.png" style="width: 100%; height: 400px " />
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext"></div>
+                <img src="~/Data/Image/banner3.png" style="width: 100%; height: 400px " />
+            </div>
+            <a class="prev" onclick="plusSlides(-1)" style="margin-bottom:20px">❮</a>
+            <a class="next" onclick="plusSlides(1)" style="margin-bottom:20px ">❯</a>
 
 
-</div>
+        </div>
+    
 <script>
-    let slideIndex = 1;
+let slideIndex = 1;
     showSlides(slideIndex);
 
     function plusSlides(n) {
@@ -103,100 +92,193 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class=" col-lg-7" style="color: #354F52; width: 700px; display:block ;margin-top: 170px;margin-left:100px ; ">
+        <div class=" col-lg-7" style="color: #354F52; width: 700px; display:block ;margin-top: 200px;margin-left:100px ; ">
 
 
-            <h1> <span style="color: #bf9369; font-size: 36pt; letter-spacing: inherit;">Về HGPhone</span></h1>
+            <h1> <span style="color: #bf9369; font-size: 36pt; letter-spacing: inherit;">Về KATINAT</span></h1>
             <p></p>
             <h2 style="letter-spacing: inherit;font-size:20px">
-                HGPhone – CHUỖI CỬA HÀNG CÔNG NGHỆ CAO CẤP
+                KATINAT Coffee & Tea House – HÀNH TRÌNH CHINH PHỤC PHONG VỊ MỚI
             </h2>
             <p>
-                HGPhone là kết quả của sự hợp tác chặt chẽ giữa Apple và HGPhone. Chúng tôi tự hào mang đến cho cộng đồng yêu thích sản phẩm Apple một không gian trải nghiệm mua sắm đẳng cấp, với cửa hàng ủy quyền chính thức được nâng cấp và cập nhật mới nhất từ Apple tại Việt Nam. Tại HGPhone, bạn sẽ tìm thấy những sản phẩm và dịch vụ chất lượng hàng đầu, cùng sự chăm sóc tận tâm dành cho các iFan.
+                Hành trình luôn bắt đầu từ việc chọn lựa nguyên liệu kỹ càng từ các vùng đất trù phú, cho đến việc bảo quản, pha chế từ bàn tay nghệ nhân. Qua những nỗ lực không ngừng, KATINAT luôn hướng đến...
             </p>
+            gitgit
         </div>
         <div class=" col-lg-5" style="text-align: center" ;>
 
-            <img src="~/Content/Image/applestore.jpg" style="width: 500px; margin-top: 50px; border-radius: 20px;" />
+            <img src="~/Content/Image/hinhnv.jpeg" style="width: 500px; margin-top: 50px;" />
         </div>
     </div>
 </div>
-<hr/>
-<div style="text-align: center; font-size: 48px; color: #6e6e73;">Các thiết bị và phụ kiện mà chung tôi cung cấp</div>
-<div class="row">
-
-    <div class="col"style="margin-bottom:20px">
-        <a href="https://www.apple.com/vn-edu/store">
-        <img class="img_menu" src="~/Content/Image/iphone.png" />
-        </a>
-        <div class="text-menu">Iphone</div>
-    </div>
-    <div class="col">
-        <img class="img_menu" src="~/Content/Image/mac.png" />
-        <div class="text-menu">Mac</div>
-    </div>
-    <div class="col">
-        <img class="img_menu" src="~/Content/Image/Tainghe.png" />
-        <div class="text-menu">Tai nghe</div>
-    </div>
-    <div class="col">
-        <img class="img_menu" src="~/Content/Image/phukien.png" />
-        <div class="text-menu">Phụ kiện</div>
-    </div>
-    <div class="col">
-        <img class="img_menu" src="~/Content/Image/ipad.png" />
-        <div class="text-menu">Ipad</div>
-    </div>
-</div>
-<hr />
 <div class="container-fluid">
     <div class="row">
-        <div class=" col-lg-5">
-            <div id="demo" class="carousel slide" data-bs-ride="carousel">
-
-                <!-- Indicators/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-                </div>
-
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="~/Content/Image/cuahangtopzone.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/Content/Image/cuahangtopzone2.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="~/Content/Image/cuahangtopzone3.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
-                    </div>
-                </div>
-
-                <!-- Left and right controls/icons -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
+        <div class="col-lg-4">
+            <div class="home-des" style="font-weight:bold;" id="font-type">
+                Cà phê
             </div>
-
+            <div>
+                <img src="~/Content/Image/caphe.jpg" class="home-image" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="home-des" style="font-weight:bold;" id="font-type">
+                Trà sữa
+            </div>
+            <div>
+                <img src="~/Content/Image/trasua.png" class="home-image" />
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="home-des" style="font-weight:bold;" id="font-type">
+                Trà trái cây
+            </div>
+            <div>
+                <img src="~/Content/Image/tratc.png" class="home-image" />
+            </div>
+        </div>
+        <div>
 
         </div>
-        <div class=" col-lg-7" style="color: #354F52; width: 650px; display:block ;margin-top: 200px;margin-left:100px" ;>
-            <h1> <span style="color: #bf9369; font-size: 36pt; letter-spacing: inherit;">Về Cửa Hàng</span></h1>
-            <p></p>
-            <p>
-                Tại HGPhone , khách hàng yêu mến hệ sinh thái Apple sẽ tìm thấy đầy đủ và đa dạng nhất các sản phẩm như iPhone, iPad, Apple Watch, MacBook và các phụ kiện Apple... với không gian mua sắm đẳng cấp, hiện đại.
-            </p>
+
+        <!--<div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">
+            <div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">
+            <div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-lg-2" style="margin-bottom:10px;">-->
+        @*stt_sp chứ_được_6_sản_phẩm(col-md-6 col-lg-2)_đủ_12  *@
+        <!--<div class="box-drinks">
+                <img src="~/Content/Image/com-tron-han-quoc.jpg" class="fm-drink" />
+            </div>
+            <div class="box-dess">
+                <p>Tên sản phảm: Cơm trộn hàn quốc</p>
+                <p>Giá bán: 150000 VNĐ</p>
+                <p>Đã bán: ?</p>
+            </div>
+
+        </div>-->
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class=" col-lg-5">
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/Content/Image/katinat1.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/Image/katinat2.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="~/Content/Image/katinat3.jpg" class="d-block" style="width: 100%; height: 500px; margin-top: 30px; border-radius: 10px">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+
+
+            </div>
+            <div class=" col-lg-7" style="color: #354F52; width: 650px; display:block ;margin-top: 200px;margin-left:100px" ;>
+                <h1> <span style="color: #bf9369; font-size: 36pt; letter-spacing: inherit;">Về Cửa Hàng</span></h1>
+                <p></p>
+                <p>
+                    Lấy cảm hứng từ các vùng đất trên thế giới, KATINAT tạo ra không gian mở và thân thiện nhằm kết nối và ghi lại những khoảnh khắc tươi vui trong lúc thưởng thức.
+                </p>
+            </div>
         </div>
     </div>
 </div>
-<br />
-<br />
-<br />
-<br />
-
 
