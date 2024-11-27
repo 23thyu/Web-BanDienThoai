@@ -11,8 +11,7 @@ namespace QLCoffee.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class SANPHAM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -25,14 +24,15 @@ namespace QLCoffee.Models
         public string TenSP { get; set; }
         public int GiaSP { get; set; }
         public Nullable<int> SoLuongSP { get; set; }
-        public string MaLoaiSP { get; set; }
-
-        [DataType(DataType.Date)]
         public Nullable<System.DateTime> NgaySX { get; set; }
         public string Image1 { get; set; }
+        public Nullable<int> MaMau { get; set; }
+        public string IDPro { get; set; }
+        public Nullable<int> SoLuongDaBan { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CHITIET_HOADON> CHITIET_HOADON { get; set; }
-        public virtual LOAISANPHAM LOAISANPHAM { get; set; }
+        public virtual MAU MAU { get; set; }
+        public virtual PRODUCT PRODUCT { get; set; }
     }
 }

@@ -40,14 +40,14 @@ namespace QLCoffee.Controllers
                 }
                 else
                 {
-                    if (user.PhanQuyen == "0")
+                    if (user.PhanQuyen == "A")
                     {
 
                         Session["TenDN"] = user.TenDN;
                         Session["PhanQuyen"] = user.PhanQuyen;
                         return RedirectToAction("Index", "TaiKhoan", new {area = "Admin"});
                     }
-                    else if (user.PhanQuyen == "1")
+                    else if (user.PhanQuyen == "C")
                     {
                         Session["TenDN"] = user.TenDN;
                         Session["PhanQuyen"] = user.PhanQuyen;
@@ -76,7 +76,7 @@ namespace QLCoffee.Controllers
                 var check_PhanQuyen = database.TAIKHOANs.Where(s => s.PhanQuyen == taikhoan.PhanQuyen).FirstOrDefault();
                 if (check_PhanQuyen == null)
                 {
-                    taikhoan.PhanQuyen = "1";
+                    taikhoan.PhanQuyen = "C";
                 }
 
                 database.TAIKHOANs.Add(taikhoan); 

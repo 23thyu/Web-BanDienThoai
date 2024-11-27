@@ -17,6 +17,11 @@ namespace QLCoffee.Areas.Admin.Controllers
         }
         public ActionResult Create()
         {
+            var customers = database.KHACHHANGs.ToList(); // Dữ liệu cho khách hàng
+            var employees = database.NHANVIENs.ToList(); // Dữ liệu cho nhân viên
+
+            ViewBag.MaKH = new SelectList(customers, "MaKH", "HoTenKH"); // Thay thế với giá trị thực tế
+            ViewBag.MaNV = new SelectList(employees, "MaNV", "TenNV");
             return View();
         }
         [HttpPost]
@@ -37,6 +42,7 @@ namespace QLCoffee.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Edit(string id, TAIKHOAN taikhoan)
         {
+            taikhoan.PhanQuyen = taikhoan.PhanQuyen.Trim();
             database.Entry(taikhoan).State = System.Data.Entity.EntityState.Modified;
             database.SaveChanges();
             return RedirectToAction("Index");

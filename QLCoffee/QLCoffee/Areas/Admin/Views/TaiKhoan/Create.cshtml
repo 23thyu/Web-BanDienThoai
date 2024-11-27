@@ -8,7 +8,7 @@
 <h2>Thêm mới tài khoản</h2>
 @using (Html.BeginForm())
 {
-    @Html.AntiForgeryToken()
+@Html.AntiForgeryToken()
 
     <div class="form-horizontal">
         <hr />
@@ -32,15 +32,24 @@
         <div class="form-group">
             <label>Xác nhận mật khẩu:</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Repass, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Repass, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.RePass, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.RePass, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            <label>Phân Quyền:</label>
+            <label>Giới tính</label>
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PhanQuyen, new { htmlAttributes = new { @class = "form-control" } })
+                <div class="radio">
+                    <label>
+                        @Html.RadioButtonFor(model => model.PhanQuyen, "A") Admin
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        @Html.RadioButtonFor(model => model.PhanQuyen, "C") Customer
+                    </label>
+                </div>
                 @Html.ValidationMessageFor(model => model.PhanQuyen, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -54,24 +63,24 @@
         </div>
 
         <div class="form-group">
-            <label>Mã nhân viên</label>
+            @Html.LabelFor(model => model.MaNV, "MaNV", htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.MaNV, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("MaNV", null, htmlAttributes: new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.MaNV, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group" style="margin-top:20px;">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-success" />
+                <input type="submit" value="Thêm mới" class="btn btn-success" />
+            </div>
+            <div style="margin-top:20px;">
+                @Html.ActionLink("Danh sách", "Index", null, new { @Class = "btn btn-primary" })
             </div>
         </div>
     </div>
     
 }
 
-<div style="margin-top:20px;">
-    @Html.ActionLink("Back to List", "Index", null, new { @Class = "btn btn-primary" })
-</div>
 
 

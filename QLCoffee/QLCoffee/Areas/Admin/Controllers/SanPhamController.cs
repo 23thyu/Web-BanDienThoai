@@ -18,24 +18,27 @@ namespace QLCoffee.Areas.Admin.Controllers
         }
         public ActionResult Create()
         {
+
             var sanpham = new SANPHAM
             {
                 NgaySX = DateTime.Now
             };
+            ViewBag.IDPro = new SelectList(database.PRODUCTs, "IDPro", "NamePro");
+            ViewBag.MaMau = new SelectList(database.MAUs, "MaMau", "TenMau", sanpham.MaMau);
             return View(sanpham);
         }
         [HttpPost]
 
         public ActionResult Create(SANPHAM sanpham)
         {
-
+            ViewBag.IDPro = new SelectList(database.PRODUCTs, "IDPro", "NamePro", sanpham.IDPro);
+            ViewBag.MaMau = new SelectList(database.MAUs, "MaMau", "TenMau", sanpham.MaMau);
             database.SANPHAMs.Add(sanpham);
             database.SaveChanges();
             return RedirectToAction("Index");
         }
         public ActionResult Details(string id)
         {
-
             return View(database.SANPHAMs.Where(s => s.MaSP == id).FirstOrDefault());
         }
         public ActionResult Edit(string id)
@@ -44,14 +47,24 @@ namespace QLCoffee.Areas.Admin.Controllers
             {
                 NgaySX = DateTime.Now
             };
+            ViewBag.IsEdit = true;
+            ViewBag.IDPro = new SelectList(database.PRODUCTs, "IDPro", "NamePro");
+            ViewBag.MaMau = new SelectList(database.MAUs, "MaMau", "TenMau");
             return View(database.SANPHAMs.Where(s => s.MaSP == id).FirstOrDefault());
         }
         [HttpPost]
         public ActionResult Edit(string id, SANPHAM sanpham)
         {
-            database.Entry(sanpham).State = System.Data.Entity.EntityState.Modified;
-            database.SaveChanges();
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                database.Entry(sanpham).State = System.Data.Entity.EntityState.Modified;
+                database.SaveChanges();
+                return RedirectToAction("Index");
+            }
+                
+            ViewBag.IDPro = new SelectList(database.PRODUCTs, "IDPro", "NamePro", sanpham.IDPro);
+            ViewBag.MaMau = new SelectList(database.MAUs, "MaMau", "TenMau", sanpham.MaMau);
+            return View(sanpham);
         }
         public ActionResult Delete(string id)
         {
