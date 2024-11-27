@@ -7,21 +7,22 @@ namespace QLCoffee.Models
 {
     public class mapSanPham
     {
-        public bool Upload_Image(string idSanPham, string Image_url) 
+        public bool UpdateImage(string idSanPham, string Image_url)
         {
             try
             {
                 QuanLyQuanCoffeeEntities db = new QuanLyQuanCoffeeEntities();
-                var SanPham = db.SANPHAMs.Find(idSanPham);
-                SanPham.Image1 = Image_url;
+                var sp = db.SANPHAMs.Find(idSanPham);
+                sp.Image1 = Image_url;
                 db.SaveChanges();
                 return true;
             }
-            catch 
-            { 
-                return false; 
-            }
 
+            catch
+            { 
+                return false;
+            }
         }
+
     }
 }

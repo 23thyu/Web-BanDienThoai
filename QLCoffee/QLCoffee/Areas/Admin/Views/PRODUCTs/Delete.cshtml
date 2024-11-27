@@ -1,0 +1,73 @@
+﻿@model QLCoffee.Models.PRODUCT
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>QUẢN LÝ CHI TIẾT SẢN PHẨM</h2>
+
+<h3>Bạn có chắc muốn xóa chi tiết sản phẩm này ?</h3>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+             Tên sản phẩm: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePro)
+        </dd>
+
+        <dt>
+            Mô tả: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Desciption)
+        </dd>
+
+        <dt>
+            Hình 1: 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img1)
+        </dd>
+
+        <dt>
+            HÌnh 2:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img3)
+        </dt>
+
+        <dd>
+            Hình 3:
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAISANPHAM.TenLoaiSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAISANPHAM.TenLoaiSP)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> |
+            @Html.ActionLink("Quay về danh sách", "Index", null, new { @class = "btn btn-dark" })
+        </div>
+     }
+</div>

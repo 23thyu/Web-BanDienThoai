@@ -17,15 +17,15 @@ namespace QLCoffee.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LOAISANPHAM()
         {
-            this.SANPHAMs = new HashSet<SANPHAM>();
+            this.PRODUCTs = new HashSet<PRODUCT>();
         }
     
         public string MaLoaiSP { get; set; }
         public string TenLoaiSP { get; set; }
         public string MaNCC { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SANPHAM> SANPHAMs { get; set; }
         public virtual NHACUNGCAP NHACUNGCAP { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PRODUCT> PRODUCTs { get; set; }
     }
 }
